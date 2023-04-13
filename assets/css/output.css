@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Epilogue", sans-serif;
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.gray-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(105, 105, 105, 0.7);
+}
+
+header {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+
+.btn-menu {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  z-index: 2;
+  background: url("../images/icon-menu.svg") no-repeat center;
+  border: none;
+}
+
+.nav, .submenu {
+  display: none;
+}
+
+.open {
+  display: block;
+}
+.open::after {
+  transform: rotate(180deg);
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  padding: 5rem 2rem;
+  background: white;
+  line-height: 2;
+}
+.nav a {
+  color: hsl(0, 0%, 41%);
+}
+
+.nav-links {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.menu-item::after {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: url("../images/icon-arrow-down.svg") no-repeat center;
+}
+
+.submenu {
+  margin: 1rem;
+}
+
+.submenu-img li::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  background: url("../images/icon-todo.svg") no-repeat center;
+}
+
+.submenu-img li:nth-child(2)::before {
+  background: url("../images/icon-calendar.svg") no-repeat center;
+}
+
+.submenu-img li:nth-child(3)::before {
+  background: url("../images/icon-reminders.svg") no-repeat center;
+}
+
+.submenu-img li:nth-child(4)::before {
+  background: url("../images/icon-planning.svg") no-repeat center;
+}
+
+.register {
+  padding: 0.5rem;
+  border: 1px solid hsl(0, 0%, 8%);
+  border-radius: 1rem;
+}
+
+picture img {
+  width: 100%;
+}
+
+.text {
+  margin: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+.text p {
+  color: hsl(0, 0%, 41%);
+  line-height: 1.7;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+}
+
+.clients {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+}
+
+footer {
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=output.css.map */
