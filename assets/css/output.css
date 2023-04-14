@@ -9,6 +9,7 @@
 }
 
 body {
+  width: 100vw;
   background-color: hsl(0, 0%, 98%);
 }
 
@@ -154,6 +155,96 @@ picture img {
 footer {
   padding: 1.5rem 1rem;
   text-align: center;
+}
+
+@media (min-width: 900px) {
+  header {
+    padding: 2rem;
+    justify-content: start;
+    gap: 3rem;
+  }
+  .btn-menu {
+    display: none;
+  }
+  .nav {
+    height: 100%;
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15rem;
+    background-color: transparent;
+  }
+  .nav ul:not(.submenu) {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav-links {
+    margin-top: 0;
+  }
+  .submenu {
+    position: absolute;
+    width: fit-content;
+    padding: 1rem;
+    top: 50%;
+    left: 6rem;
+    background: white;
+  }
+  .submenu-img {
+    left: -3rem;
+  }
+  a:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: bold;
+  }
+  main {
+    margin: 0 8rem 5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+  }
+  main picture {
+    height: 100%;
+    width: 45%;
+  }
+  section {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+  .text {
+    width: 100%;
+    margin-top: 5rem;
+    align-items: flex-start;
+    gap: 3rem;
+    text-align: left;
+  }
+  .text h1 {
+    font-size: 4rem;
+  }
+  .text p {
+    padding-right: 4rem;
+    font-size: 1.3rem;
+  }
+  .btn:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 98%);
+  }
+  .clients {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */

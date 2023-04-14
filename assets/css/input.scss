@@ -22,6 +22,7 @@ $almost-black: hsl(0, 0%, 8%);
 }
 
 body {
+    width: 100vw;
     background-color: $almost-white;
 }
 .gray-bg::before {
@@ -143,4 +144,83 @@ picture img {
 footer {
     padding: 1.5rem 1rem;
     text-align: center;
+}
+
+@media (min-width: 900px) {
+    header {
+        padding: 2rem;
+        justify-content: start;
+        gap: 3rem;
+    }
+    .btn-menu {
+        display: none;
+    }
+    .nav {
+        height: 100%;
+        position: relative;
+        padding: 0;
+        @include flex(row, space-between, center, 15rem);
+
+        background-color: transparent;
+
+        ul:not(.submenu) {
+            @include flex(row, start, center, 2rem);
+        }
+    }
+    .nav-links {
+        margin-top: 0;
+    }
+    .submenu {
+        position: absolute;
+        width: fit-content;
+        padding: 1rem;
+        top: 50%;
+        left: 6rem;
+        
+        background: white;
+    }
+    .submenu-img {
+        left: -3rem;
+    }
+    a:hover {
+        color: $almost-black;
+        font-weight: bold;
+    }
+    main {
+        margin: 0 8rem 5rem;
+        @include flex(row-reverse, center, center, 10%);
+
+        picture {
+            height: 100%;
+            width: 45%;
+        }
+    }
+    section {
+        width: 45%;
+        height: 100%;
+        @include flex(column, space-between, center);
+    }
+    .text {
+        width: 100%;
+        margin-top: 5rem;
+        align-items: flex-start;
+        gap: 3rem;
+        text-align: left;
+
+        h1 {
+            font-size: 4rem;
+        }
+        p {
+            padding-right: 4rem;
+            font-size: 1.3rem;
+        }
+    }
+    .btn:hover {
+        cursor: pointer;
+        color: $almost-black;
+        background-color: $almost-white;
+    }
+    .clients {
+        width: 100%;
+    }
 }
